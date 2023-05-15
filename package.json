@@ -1,6 +1,6 @@
 {
   "name": "vsc-presence-server",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "VS Code Presence Server",
   "repository": "https://github.com/BRAVO68WEB/vsc-presence-server.git",
   "main": "src/server.ts",
@@ -45,6 +45,7 @@
     "typescript": "^4.7.4"
   },
   "dependencies": {
+    "@types/node-fetch": "^2.6.3",
     "express": "^4.18.2",
     "ioredis": "^5.3.2",
     "redis": "^4.6.6",

@@ -22,7 +22,7 @@
     "name": "Jyotirmoy Bandyopadhayaya",
     "url": "https://itsmebravo.dev"
   },
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "@types/express": "^4.17.17",
     "@types/jest": "^28.1.6",

@@ -1,0 +1,22 @@
+name: Build Checks for Server
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 16
+      - run: npm install -g yarn
+      - run: yarn
+      - run: yarn build
+      - run: apt update && apt install -y redis-server jq
+      - run: systemctl start redis-server
+      - run: node build/server.js &
+      - run: sleep 3
+      - run: curl http://localhost:3000/register\?email\=test@test.org  | jq .

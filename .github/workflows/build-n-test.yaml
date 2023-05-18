@@ -15,8 +15,8 @@ jobs:
       - run: npm install -g yarn
       - run: yarn
       - run: yarn build
-      - run: apt update && apt install -y redis-server jq
-      - run: systemctl start redis-server
+      - run: sudo apt update && apt install -y redis-server jq
+      - run: sudo systemctl start redis-server
       - run: node build/server.js &
       - run: sleep 3
       - run: curl http://localhost:3000/register\?email\=test@test.org  | jq .

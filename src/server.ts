@@ -1,4 +1,5 @@
 /* eslint-disable no-console */
+import 'dotenv/config';
 import express from 'express';
 import WebSocket from 'ws';
 import Redis from 'ioredis';
@@ -12,7 +13,7 @@ const server = app.listen(3000, () => {
 const wss = new WebSocket.Server({ server });
 
 // Redis configuration
-const redis = new Redis();
+const redis = new Redis(process.env.REDIS_HOST_URL as string);
 
 // WebSocket listener
 wss.on('connection', (ws: WebSocket) => {

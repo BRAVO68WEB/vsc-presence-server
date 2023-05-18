@@ -1,6 +1,6 @@
 {
   "name": "vsc-presence-server",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "VS Code Presence Server",
   "repository": "https://github.com/BRAVO68WEB/vsc-presence-server.git",
   "main": "src/server.ts",
